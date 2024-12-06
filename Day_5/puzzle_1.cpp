@@ -106,13 +106,12 @@ int main()
         std::string part1, part2;
         if (std::getline(iss, part1, '|') && std::getline(iss, part2, '|'))
         {
-            part1.erase(std::remove(part1.begin(), part1.end(), ' '), part1.end());
-            part2.erase(std::remove(part2.begin(), part2.end(), ' '), part2.end());
             int p1 = std::stoi(part1);
             int p2 = std::stoi(part2);
             pairs.emplace_back(p1, p2);
         }
     }
+
     std::cout << "Total pairs parsed: " << pairs.size() << "\n";
     std::vector<std::vector<int>> page_vec;
     std::vector<int> line_inputs;
